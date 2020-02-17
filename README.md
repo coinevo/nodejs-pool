@@ -72,7 +72,7 @@ pm2 restart api
 
 Install Script:
 ```bash
-curl -L https://raw.githubusercontent.com/MoneroOcean/nodejs-pool/master/deployment/deploy.bash | bash
+curl -L https://raw.githubusercontent.com/coinevo/nodejs-pool/master/deployment/deploy.bash | bash
 ```
 
 Assumptions for the installer
