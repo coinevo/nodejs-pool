@@ -12,18 +12,18 @@ sudo apt-get update
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 sudo DEBIAN_FRONTEND=noninteractive apt-get -y install ntp build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev
 cd ~
-git clone https://github.com/MoneroOcean/nodejs-pool.git
+git clone https://github.com/coinevo/nodejs-pool.git
 sudo systemctl enable ntp
 cd /usr/local/src
-sudo git clone --recursive https://github.com/monero-project/monero.git
-cd monero
-sudo git checkout v0.15.0.1
+sudo git clone --recursive https://github.com/coinevo/coinevo.git
+cd coinevo
+sudo git checkout master
 sudo USE_SINGLE_BUILDDIR=1 make -j$(nproc) || sudo USE_SINGLE_BUILDDIR=1 make || exit 0
-sudo cp ~/nodejs-pool/deployment/monero.service /lib/systemd/system/
-sudo useradd -m monerodaemon -d /home/monerodaemon
+sudo cp ~/nodejs-pool/deployment/coinevo.service /lib/systemd/system/
+sudo useradd -m coinevodaemon -d /home/coinevodaemon
 sudo systemctl daemon-reload
-sudo systemctl enable monero
-sudo systemctl start monero
+sudo systemctl enable coinevo
+sudo systemctl start coinevo
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install v8.11.3
