@@ -23,7 +23,7 @@ sudo git clone --recursive https://github.com/coinevo/coinevo.git
 cd coinevo
 sudo git checkout master
 sudo USE_SINGLE_BUILDDIR=1 make -j$(nproc) || sudo USE_SINGLE_BUILDDIR=1 make || exit 0
-sudo cp ~/nodejs-pool/deployment/monero.service /lib/systemd/system/
+sudo cp ~/nodejs-pool/deployment/coinevo.service /lib/systemd/system/
 sudo useradd -m coinevodaemon -d /home/coinevodaemon
 sudo systemctl daemon-reload
 sudo systemctl enable coinevo
