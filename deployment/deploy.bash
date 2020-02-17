@@ -39,7 +39,7 @@ openssl req -subj "/C=IT/ST=Pool/L=Daemon/O=Mining Pool/CN=mining.pool" -newkey 
 mkdir ~/pool_db/
 sed -r "s/(\"db_storage_path\": ).*/\1\"\/home\/$CURUSER\/pool_db\/\",/" config_example.json > config.json
 cd ~
-git clone https://github.com/mesh0000/poolui.git
+git clone https://github.com/coinevo/poolui.git
 cd poolui
 npm install
 ./node_modules/bower/bin/bower update
