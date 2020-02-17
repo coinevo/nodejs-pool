@@ -5,7 +5,7 @@
   "main": "init.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MoneroOcean/nodejs-pool.git"
+    "url": "https://github.com/coinevo/nodejs-pool.git"
   },
   "author": "Multiple",
   "license": "MIT",
